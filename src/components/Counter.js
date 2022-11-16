@@ -6,8 +6,8 @@ import classes from './Counter.module.css';
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector(state => state.counter); //pass a func to redux which will determine which 'piece' of data we will extract from the store
-  const showCounter = useSelector(state => state.showCounter);
+  const counter = useSelector(state => state.counter.counter); //pass a func to redux which will determine which 'piece' of data we will extract from the store
+  const showCounter = useSelector(state => state.counter.showCounter);
   const toggleCounterHandler = () => {
     dispatch(counterActions.toggleCounter());
   };
@@ -38,6 +38,5 @@ const Counter = () => {
     </main>
   );
 };
-
 
 export default Counter;
